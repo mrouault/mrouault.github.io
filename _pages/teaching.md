@@ -10,7 +10,7 @@ Recently, I have been a teaching assistant at <a href="https://centralelille.fr/
 
 ## 2025/2026
 
-- Statistiques M1 NSA, Université de Lille.
+- Statistiques, M1 NSA, Université de Lille.
 - Analyse pour l'ingénieur, L3 Centrale Lille.
 
 ## 2024/2025
