@@ -2,26 +2,40 @@ name: Build and deploy Jekyll site to GitHub Pages
 
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  jekyll:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      # Use GitHub Actions' cache to shorten build times and decrease load on servers
-      - uses: actions/cache@v4
+      # Install Ruby 2.7 exactly like your local setup
+      - uses: ruby/setup-ruby@v1
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+          ruby-version: "2.7"
+          bundler-cache: true
 
-      # Jekyll build and deploy
-      - uses: helaili/jekyll-action@v2
+      - name: Build the site with Jekyll (no changes to Gemfile)
+        run: bundle exec jekyll build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          jekyll_src: "."
-          target_branch: "gh-pages"
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
