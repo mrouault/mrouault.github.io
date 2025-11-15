@@ -1,6 +1,18 @@
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches: ["master"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-20.04
+
     steps:
       - uses: actions/checkout@v4
 
@@ -9,7 +21,7 @@ jobs:
           ruby-version: "2.7"
           bundler-cache: false
 
-      - name: Install Bundler 2.3 (works on ubuntu-20.04)
+      - name: Install Bundler 2.3
         run: gem install bundler -v "~> 2.3"
 
       - name: Install dependencies
@@ -17,6 +29,17 @@ jobs:
 
       - name: Build site
         run: bundle exec jekyll build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-20.04
+    environment:
+      name: github-pages
 
     steps:
       - name: Deploy to GitHub Pages
