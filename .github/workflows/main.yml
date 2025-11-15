@@ -1,8 +1,8 @@
-name: Build and deploy Jekyll site to GitHub Pages
+name: Build and deploy Jekyll site
 
 on:
   push:
-    branches: ["master"]
+    branches: [ "master" ]
 
 permissions:
   contents: read
@@ -11,37 +11,36 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
+    container:
+      image: ruby:2.7-slim   # <-- KEY FIX
 
     steps:
       - uses: actions/checkout@v4
 
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "2.7"
-          bundler-cache: false
+      - name: Install system deps
+        run: |
+          apt-get update
+          apt-get install -y build-essential
 
-      - name: Install Bundler 2.3
+      - name: Install Bundler
         run: gem install bundler -v "~> 2.3"
 
-      - name: Install dependencies
+      - name: Install gems
         run: bundle install --path vendor/bundle
 
       - name: Build site
         run: bundle exec jekyll build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
 
   deploy:
     needs: build
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
 
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
