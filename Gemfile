@@ -1,13 +1,14 @@
 source "https://rubygems.org"
 
-gem "github-pages", "~> 228", group: :jekyll_plugins
+ruby ">= 3.2"
 
-# remove: gem "minimal-mistakes-jekyll"
-# GitHub Pages already includes the correct version.
+gem "jekyll", "~> 4.3"
+gem "jekyll-scholar", "~> 7.2"
+gem "jekyll-paginate", "~> 1.1"
+gem "jekyll-sitemap", "~> 1.4"
+gem "jekyll-gist", "~> 1.5.0"
+gem "jekyll-feed", "~> 0.16"
+gem "jekyll-include-cache", "~> 0.2"
+gem "bibtex-ruby", "~> 6.0"
+gem "tzinfo-data", platforms: :windows
 
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-group :jekyll_plugins do
-  gem "jekyll-scholar", "~> 5.16.0"
-  gem "bibtex-ruby", "~> 4.2"
-end
