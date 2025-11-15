@@ -9,20 +9,19 @@ jobs:
   jekyll:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      # Standard usage
+
+      # Jekyll build and deploy
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          # Specify the Jekyll source location as a parameter
           jekyll_src: "."
-          # Specify the target branch (optional)
           target_branch: "gh-pages"
