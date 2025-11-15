@@ -1,39 +1,20 @@
 ---
-permalink: "/publications/"
+permalink: "/research/"
 layout: single
-# classes: wide
+classes: wide
 author_profile: true
-title: ""
-toc: true
-toc_label: "Publications"
-toc_sticky: true
+title: "Research"
+#toc: true
+#toc_label: "Publications"
+#toc_sticky: true
 ---
 
+My publications can be found on <a href="https://scholar.google.com/citations?hl=en&user=sG650W8AAAAJ">Google scholar</a> or <a href="https://arxiv.org/a/0009-0001-1299-7587">arXiv</a>.
+
 <!-- Go to _config.yml file and fill the corresponding fields author.academic_profiles.xxxx-->
-{% if site.author.academic_profiles.google-scholar %}
-  <a href="{{ site.author.academic_profiles.google-scholar }}">
-    <i class="ai ai-google-scholar" aria-hidden="true"></i>Scholar
-  </a>
-{% endif %}
-{% if site.author.academic_profiles.orcid %}
-  <a href="{{ site.author.academic_profiles.orcid }}">
-    <i class="ai ai-orcid" aria-hidden="true"></i>Orcid
-  </a>
-{% endif %}
-{% if site.author.academic_profiles.hal %}
-  <a href="{{ site.author.academic_profiles.hal }}">
-    <i class="ai ai-hal" aria-hidden="true"></i>HAL
-  </a>
-{% endif %}
-{% if site.author.academic_profiles.arxiv %}
-  <a href="{{ site.author.academic_profiles.arxiv }}">
-    <i class="ai ai-arxiv" aria-hidden="true"></i>Arxiv
-  </a>
-{% endif %}
+
 
 <!-- See also https://github.com/inukshuk/jekyll-scholar to customize your references -->
-
-This is a mock example: the references are not correct!
 
 <!-- Preprints -->
 {% capture counter_preprints %}{% bibliography_count --query @unpublished %}{% endcapture %}

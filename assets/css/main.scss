@@ -6,3 +6,58 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* ==========================================================
+   Minimal Mistakes: Clean Circular Author Avatar
+   Fully visible, no borders/shadows, responsive
+   ========================================================== */
+
+.author__avatar,
+.author__avatar a {
+  width: 200px;        /* desired size */
+  height: 200px;       /* same as width for circular shape */
+  border-radius: 50%;  /* circular container */
+  display: flex;       /* center the image */
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.author__avatar img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* full image visible, no cropping */
+  border-radius: 50%;  /* circular image itself */
+  display: block;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any pseudo-elements from container or link */
+.author__avatar::before,
+.author__avatar::after,
+.author__avatar a::before,
+.author__avatar a::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .author__avatar,
+  .author__avatar a {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .author__avatar,
+  .author__avatar a {
+    width: 120px;
+    height: 120px;
+  }
+}
+

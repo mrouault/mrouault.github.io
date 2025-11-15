@@ -2,12 +2,7 @@
 ---
 
 <!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
+<!-- Minimal Mistakes Jekyll Theme 4.22.0 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
     {% include head.html %}
@@ -37,6 +32,30 @@
     </div>
 
     {% include scripts.html %}
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const avatars = document.querySelectorAll(".author__avatar, .author__avatar a, .author__avatar img");
+
+  // Force fully visible initially
+  avatars.forEach(el => {
+    el.style.opacity = "1";
+    el.style.filter = "none";
+  });
+
+  // Observe changes to inline styles or classes (hover/mouseleave)
+  const observer = new MutationObserver(() => {
+    avatars.forEach(el => {
+      el.style.opacity = "1";
+      el.style.filter = "none";
+    });
+  });
+
+  avatars.forEach(el => {
+    observer.observe(el, { attributes: true, attributeFilter: ['style', 'class'] });
+  });
+});
+</script>
 
   </body>
 </html>
+
