@@ -13,9 +13,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    # 🔥 Ensures Ruby 2.7 is used — this is critical
+    # Use Ruby 3.2
     container:
-      image: ruby:2.7-slim
+      image: ruby:3.2-slim
 
     steps:
       - uses: actions/checkout@v4
@@ -25,9 +25,9 @@ jobs:
           apt-get update
           apt-get install -y build-essential
 
-      # 🔥 The ONLY Bundler that fully supports Ruby 2.7
-      - name: Install Bundler 2.2.33
-        run: gem install bundler -v 2.2.33
+      # Install Bundler compatible with Ruby 3.2
+      - name: Install Bundler
+        run: gem install bundler
 
       - name: Install gems
         run: bundle install --path vendor/bundle
