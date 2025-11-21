@@ -3,10 +3,10 @@
 ---
 $background-color: rgba(250, 247, 225, 1) !default;
 $text-color: #050505 !default;
-$primary-color: #00adb5 !default;
+$primary-color: #c57432 !default;
 $link-color: mix($primary-color, $text-color, 80%) !default;
-$link-color-hover: mix(#34c89c, $link-color, 25%) !default;
-$link-color-visited: mix(#346658, $link-color, 25%) !default;
+/*$link-color-hover: mix(#34c89c, $link-color, 25%) !default;*/
+$link-color-visited: mix(#121313, $link-color, 25%) !default;
 
 @charset "utf-8";
 
