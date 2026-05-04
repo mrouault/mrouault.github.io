@@ -15,13 +15,6 @@ My publications can be found on <a href="https://scholar.google.com/citations?hl
 
 
 <!-- See also https://github.com/inukshuk/jekyll-scholar to customize your references -->
----
-title: "Research"
-permalink: /research/
-layout: single
-author_profile: true
----
-
 ## Preprints
 
 <ul>
