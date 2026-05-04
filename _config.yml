@@ -100,9 +100,9 @@ author:
   name: "Martin Rouault"
   avatar: "/assets/images/bio-photo.jpg"
   avatar_round: true
-  bio: "Ph.D. student in mathematics <br> and machine learning <br>"
-  location: "Lille, France"
-  email: "martin.rouault@univ-lille.fr"
+  bio: "Ph.D. in mathematics <br> and machine learning <br>"
+  location: 
+  email: "rouault.martin@protonmail.com"
   github: "mrouault"
   webpage: "https://mrouault.github.io"
   # Academic profiles
