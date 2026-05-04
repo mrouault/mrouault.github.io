@@ -29,8 +29,8 @@ author_profile: true
 <li>
 <strong>Quenched large deviations for Monte Carlo integration with Coulomb gases</strong><br>
 Rémi Bardenet, Mylène Maïda, Martin Rouault<br>
-<a href="https://arxiv.org/abs/2508.01392">arXiv:2508.01392</a><br>
-<em>Minor revision for Bernoulli journal</em>
+<em>minor revision for Bernoulli journal</em><br>
+<a href="https://arxiv.org/abs/2508.01392">arXiv</a>
 </li>
 
 <br>
@@ -38,8 +38,8 @@ Rémi Bardenet, Mylène Maïda, Martin Rouault<br>
 <li>
 <strong>Monte Carlo with kernel-based Gibbs measures: Guarantees for probabilistic herding</strong><br>
 Martin Rouault, Rémi Bardenet, Mylène Maïda<br>
-<a href="https://arxiv.org/abs/2402.11736">arXiv:2402.11736</a><br>
 <em>Minor revision for SIAM Journal on Mathematics of Data Science</em>
+<a href="https://arxiv.org/abs/2402.11736">arXiv</a>
 </li>
 
 </ul>
@@ -54,7 +54,7 @@ Martin Rouault, Rémi Bardenet, Mylène Maïda<br>
 <strong>Intégrer plusieurs fonctions simultanément avec des mesures de Gibbs</strong><br>
 Martin Rouault, Rémi Bardenet, Mylène Maïda<br>
 GRETSI 2025<br>
-<a href="https://hal.science/hal-05213385">HAL paper</a>
+<a href="https://hal.science/hal-05213385">HAL</a>
 </li>
 
 </ul>
