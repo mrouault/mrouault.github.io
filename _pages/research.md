@@ -22,7 +22,7 @@ My publications can be found on <a href="https://scholar.google.com/citations?hl
 <li>
 <strong>Quenched large deviations for Monte Carlo integration with Coulomb gases</strong><br>
 Rémi Bardenet, Mylène Maïda, Martin Rouault<br>
-<em>minor revision for Bernoulli journal</em><br>
+<em>Minor revision for Bernoulli journal</em><br>
 <a href="https://arxiv.org/abs/2508.01392">arXiv</a>
 </li>
 
