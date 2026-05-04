@@ -15,66 +15,46 @@ My publications can be found on <a href="https://scholar.google.com/citations?hl
 
 
 <!-- See also https://github.com/inukshuk/jekyll-scholar to customize your references -->
-
-<!-- Preprints -->
-{% capture counter_preprints %}{% bibliography_count --query @unpublished %}{% endcapture %}
-{% if counter_preprints != "0" %}
+---
+title: "Research"
+permalink: /research/
+layout: single
+author_profile: true
+---
 
 ## Preprints
 
-  {% bibliography --query @unpublished %}
-{% endif %}
+<ul>
 
-<!-- Journal articles-->
-{% capture counter_book %}{% bibliography_count --query @book %}{% endcapture %}
-{% if counter_book != "0" %}
+<li>
+<strong>Quenched large deviations for Monte Carlo integration with Coulomb gases</strong><br>
+Rémi Bardenet, Mylène Maïda, Martin Rouault<br>
+<a href="https://arxiv.org/abs/2508.01392">arXiv:2508.01392</a><br>
+<em>Minor revision for Bernoulli journal</em>
+</li>
 
-## Books
+<br>
 
-  {% bibliography --query @book %}
-{% endif %}
+<li>
+<strong>Monte Carlo with kernel-based Gibbs measures: Guarantees for probabilistic herding</strong><br>
+Martin Rouault, Rémi Bardenet, Mylène Maïda<br>
+<a href="https://arxiv.org/abs/2402.11736">arXiv:2402.11736</a><br>
+<em>Minor revision for SIAM Journal on Mathematics of Data Science</em>
+</li>
 
-<!-- Journal articles-->
-{% capture counter_article %}{% bibliography_count --query @article %}{% endcapture %}
-{% if counter_article != "0" %}
+</ul>
 
-## Journal articles
-
-  {% bibliography --query @article %}
-{% endif %}
-
-<!-- Conference papers -->
-{% capture counter_inproceedings %}{% bibliography_count --query @inproceedings %}{% endcapture %}
-{% if counter_inproceedings != "0" %}
+---
 
 ## Conference papers
 
-  {% bibliography --query @inproceedings %}
-{% endif %}
+<ul>
 
-<!-- Workshop papers -->
-{% capture counter_workshop %}{% bibliography_count --query @misc[keywords=workshop] %}{% endcapture %}
-{% if counter_workshop != "0" %}
+<li>
+<strong>Intégrer plusieurs fonctions simultanément avec des mesures de Gibbs</strong><br>
+Martin Rouault, Rémi Bardenet, Mylène Maïda<br>
+GRETSI 2025<br>
+<a href="https://hal.science/hal-05213385">HAL paper</a>
+</li>
 
-## Workshop papers
-
-  {% bibliography --query @misc[keywords=workshop] %}
-{% endif %}
-
-<!-- Thesis -->
-{% capture counter_thesis %}{% bibliography_count --query @thesis %}{% endcapture %}
-{% if counter_thesis != "0" %}
-
-## Thesis
-
-  {% bibliography --query @thesis %}
-{% endif %}
-
-<!-- Popularization -->
-{% capture counter_popularization %}{% bibliography_count --query @misc[keywords=popularization] %}{% endcapture %}
-{% if counter_popularization != "0" %}
-
-## Popularization
-
-  {% bibliography --query @misc[keywords=popularization] %}
-{% endif %}
+</ul>
