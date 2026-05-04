@@ -11,5 +11,5 @@ I was supervised by <a href="https://rbardenet.github.io/">Rémi Bardenet</a> an
 
 I am broadly interested in designing and understanding learning algorithms through the lens of statistical physics and interacting particle systems.
 
-During my Ph.D. I worked on sampling algorithms, known as *Monte Carlo* methods, relying on repulsive point processes known as *Gibbs measures* that favor configurations of points with low *energy*.
+During my Ph.D., I worked on sampling algorithms, known as *Monte Carlo* methods, relying on repulsive point processes known as *Gibbs measures* that favor configurations of points with low *energy*.
 
