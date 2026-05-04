@@ -31,7 +31,7 @@ Rémi Bardenet, Mylène Maïda, Martin Rouault<br>
 <li>
 <strong>Monte Carlo with kernel-based Gibbs measures: Guarantees for probabilistic herding</strong><br>
 Martin Rouault, Rémi Bardenet, Mylène Maïda<br>
-<em>Minor revision for SIAM Journal on Mathematics of Data Science</em>
+<em>Minor revision for SIAM Journal on Mathematics of Data Science</em><br>
 <a href="https://arxiv.org/abs/2402.11736">arXiv</a>
 </li>
 
