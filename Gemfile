@@ -12,3 +12,5 @@ gem "jekyll-include-cache", "~> 0.2"
 gem "bibtex-ruby", "~> 6.0"
 gem "tzinfo-data", platforms: :windows
 
+gem "github-pages", group: :jekyll_plugins
+
